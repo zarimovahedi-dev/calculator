@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        overflow-x: hidden;
+        @apply bg-gray-800
+    }
+}
+
+@layer components {
+    .calc {
+        @apply w-[70%] md:w-[25%] h-125 flex flex-wrap bg-mist-400 rounded-2xl mx-auto mt-24;
+    }
+
+    .inp {
+        @apply w-[80%] h-14 bg-emerald-50 rounded-2xl mx-auto mt-8 text-2xl px-4;
+    }
+
+    .btn {
+        @apply w-[80%] h-[70%] flex flex-wrap justify-between content-between mx-auto text-3xl;
+    }
+
+    .btn>button {
+        @apply w-[23%] h-14 bg-amber-50 rounded-2xl shadow-2xl nth-[4]:bg-gray-600 nth-[8]:bg-gray-600 nth-[12]:bg-gray-600 nth-[13]:bg-red-400 nth-[15]:bg-gray-600 nth-[16]:bg-gray-600;
+    }
+
+    .foot {
+        @apply w-full mt-24 py-16 bg-slate-950;
+    }
+
+    .card {
+        @apply relative w-[90%] md:w-[720px] mx-auto bg-slate-900 rounded-3xl p-8 shadow-2xl flex flex-col md:flex-row items-center gap-8 overflow-hidden;
+    }
+
+    .card::before {
+        content: '';
+        @apply absolute top-0 left-0 w-full h-1.5 bg-violet-500;
+    }
+
+    .card figure {
+        @apply w-40 h-40 rounded-full overflow-hidden border-4 border-violet-500 shrink-0;
+    }
+
+    .card img {
+        @apply w-full h-full object-cover duration-500 hover:scale-110;
+    }
+
+    .info {
+        @apply text-center md:text-left;
+    }
+
+    .info h2 {
+        @apply text-4xl font-bold text-white;
+    }
+
+    .job {
+        @apply text-violet-400 mt-2;
+    }
+
+    .about {
+        @apply text-gray-400 mt-3 leading-7;
+    }
+
+    .social {
+        @apply flex justify-center md:justify-start gap-4 my-6;
+    }
+
+    .social a {
+        @apply w-12 h-12 rounded-full bg-slate-800 flex justify-center items-center border border-slate-700 duration-300;
+    }
+
+    .social a:hover {
+        @apply bg-violet-500 border-violet-500 -translate-y-1;
+    }
+
+    .social svg {
+        @apply w-6 h-6 fill-white;
+    }
+
+    .info small {
+        @apply text-gray-500;
+    }
+
+}
+
+
+
+
+
+
+
+/* npx @tailwindcss/cli -i ./src/assets/stylesheet/main.css -o ./src/assets/stylesheet/output.css --watch */
